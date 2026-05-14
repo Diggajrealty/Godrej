@@ -449,7 +449,7 @@
 /* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:2000;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
 .modal-overlay.open{display:flex}
-.modal-box{background:#fff;border-radius:16px;padding:2.5rem;max-width:480px;width:calc(100% - 2rem);position:relative;animation:fadeUp .35s ease}
+.modal-box{background:#fff;border-radius:16px;padding:2.5rem;max-width:480px;width:calc(100% - 2rem);position:relative;animation:fadeUp .35s ease; max-height: 90vh; overflow-y: auto;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#5a5a5a;line-height:1;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:.2s}
 .modal-close:hover{background:#f0ebe3;color:#1B3A2D}
@@ -469,8 +469,10 @@
 @keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 32px rgba(37,211,102,.7)}}
 /* RESPONSIVE */
 @media(max-width:1024px){.price-grid{grid-template-columns:repeat(2,1fr)}.am-grid{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:768px){.about-grid{grid-template-columns:1fr}.fp-panel.active{grid-template-columns:1fr}.am-grid{grid-template-columns:repeat(3,1fr)}.price-grid{grid-template-columns:1fr 1fr}.godrej-trust{flex-direction:column;text-align:center}}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}.fp-panel.active{grid-template-columns:1fr}.am-grid{grid-template-columns:repeat(3,1fr)}.price-grid{grid-template-columns:1fr 1fr}.godrej-trust{flex-direction:column;text-align:center}.split-grid{grid-template-columns:1fr !important;}.mobile-reverse-grid > div:last-child{order:-1;}}
 @media(max-width:480px){.price-grid{grid-template-columns:1fr}.am-grid{grid-template-columns:repeat(2,1fr)}.hero-ctas{flex-direction:column}.stats-inner{justify-content:center}}
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 \n
 /* LOCATION */
 .location-sec{background:#fff;padding:5rem 2rem}
@@ -851,7 +853,8 @@
   
 <section style="padding: 5rem 1.5rem; background: #fff; max-width: 1000px; margin: 0 auto;">
   <h2 style="font-family: 'Playfair Display', serif; color: #1B3A2D; text-align: center; margin-bottom: 2rem; font-size: 2.2rem;">Project at a Glance</h2>
-  <table style="width: 100%; border-collapse: collapse; text-align: left; background: #F9F7F2; border: 1px solid #E5DFD3;">
+  <div class="table-responsive">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; background: #F9F7F2; border: 1px solid #E5DFD3; min-width: 600px;">
     <tbody>
       <tr style="border-bottom: 1px solid #E5DFD3;">
         <th style="padding: 1.2rem; width: 40%; color: #1B3A2D;">Project Name</th>
@@ -883,6 +886,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </section>
 
   <section class="about">
@@ -919,7 +923,7 @@
 
   
 <section style="padding: 4rem 1.5rem; background: #F5F0E8;">
-  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+  <div style="max-width: 1200px; margin: 0 auto;" class="split-grid mobile-reverse-grid">
     <div>
       <h2 style="font-family: 'Playfair Display', serif; color: #1B3A2D; margin-bottom: 1.5rem; font-size: 2.2rem;">Why Invest in Godrej Vanantara?</h2>
       <p style="color: #5a5a5a; line-height: 1.8; margin-bottom: 1rem;">Investing in pre-launch apartments in South Bangalore offers unparalleled appreciation potential. Godrej Vanantara is not just a residence; it's a 36-acre forest-themed township that redefines luxury living. With over 40,000 trees and 80% open spaces, it provides a serene escape from city life while keeping you connected to major hubs.</p>
@@ -927,7 +931,7 @@
       <a href="#contact" class="btn-gold" aria-label="Book a Site Visit">Book a Site Visit</a>
     </div>
     <div>
-      <img src="images/godrej-vanantara-bangalore-exterior-elevation-image.webp" alt="Godrej Vanantara 36-acre forest township aerial view, Bannerghatta Road Bangalore" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" width="800" height="600">
+      <img src="images/godrej-vanantara-bangalore-exterior-elevation-image.webp" alt="Godrej Vanantara 36-acre forest township aerial view, Bannerghatta Road Bangalore" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" loading="lazy" width="800" height="600">
     </div>
   </div>
 </section>
@@ -1003,7 +1007,8 @@
   
 <div style="max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem;">
   <h3 style="font-family: 'Playfair Display', serif; color: #1B3A2D; margin-bottom: 1.5rem; font-size: 1.8rem;">Godrej Vanantara Unit Types & Price List</h3>
-  <table style="width: 100%; border-collapse: collapse; text-align: left; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
+  <div class="table-responsive">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; min-width: 600px;">
     <thead style="background: #1B3A2D; color: #fff;">
       <tr>
         <th style="padding: 1rem;">Configuration</th>
@@ -1039,6 +1044,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
 <section id="floorplans" class="floorplan-sec">
     <div class="fp-inner">
@@ -1196,7 +1202,7 @@
 
   
 <div style="max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem;">
+  <div class="split-grid" style="margin-bottom: 4rem;">
     <div>
       <h3 style="font-family: 'Playfair Display', serif; color: #1B3A2D; margin-bottom: 1rem; font-size: 1.8rem;">Location Advantages</h3>
       <p style="color: #5a5a5a; line-height: 1.8; margin-bottom: 1rem;">Bannerghatta Road is one of South Bangalore's most prominent real estate hubs, transforming rapidly with the addition of the Yellow and upcoming Pink Line Namma Metro. Living at Godrej Vanantara means you are never far from the city's pulse, yet nestled in a serene 36-acre forest reserve.</p>
@@ -1210,7 +1216,8 @@
   </div>
 
   <h3 style="font-family: 'Playfair Display', serif; color: #1B3A2D; margin-bottom: 1.5rem; font-size: 1.8rem; text-align: center;">Nearby Landmarks & Distances</h3>
-  <table style="width: 100%; border-collapse: collapse; text-align: left; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; margin-bottom: 3rem;">
+  <div class="table-responsive">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; margin-bottom: 3rem; min-width: 600px;">
     <thead style="background: #1B3A2D; color: #fff;">
       <tr>
         <th style="padding: 1rem;">Category</th>
@@ -1251,6 +1258,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </div>
 <section id="blog" class="blog-sec">
     <div class="blog-inner">
