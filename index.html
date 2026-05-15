@@ -865,6 +865,7 @@
         <h3>Book a Free Site Visit</h3>
         <p>Get exclusive pre-launch pricing, floor plans &amp; RERA documents — sent instantly.</p>
         <form id="hero-enquiry-form" name="Hero Enquiry Form" method="POST" action="success.html" data-netlify="true" onsubmit="handleHeroForm(event)" novalidate>
+          <input type="hidden" name="form-name" value="Hero Enquiry Form" />
           <div class="hf-group">
             <span class="hf-icon">👤</span>
             <input type="text" id="hf-name" name="name" placeholder="Your Full Name" required autocomplete="name" />
@@ -1805,21 +1806,49 @@
     /* ---- Hero Form Handler ---- */
     function handleHeroForm(e) {
       e.preventDefault();
-      const btn = document.querySelector('.hf-submit');
-      const name = document.getElementById('hf-name').value.trim();
+      const form = document.getElementById('hero-enquiry-form');
+      const btn  = form.querySelector('.hf-submit');
+      const name  = document.getElementById('hf-name').value.trim();
       const email = document.getElementById('hf-email').value.trim();
       const phone = document.getElementById('hf-phone').value.trim();
-      if (!name || !email || !phone) { alert('Please fill all fields.'); return; }
-      if (!/^\d{10}$/.test(phone)) { alert('Please enter a valid 10-digit phone number.'); return; }
-      btn.textContent = '✓ Request Received!';
-      btn.style.background = 'linear-gradient(135deg,#2a8a4a,#3eb866)';
+
+      // Client-side validation
+      if (!name || !email || !phone) {
+        alert('Please fill in all fields.');
+        return;
+      }
+      if (!/^\d{10}$/.test(phone)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
+      }
+
+      // Loading state
+      btn.textContent = 'Submitting...';
       btn.disabled = true;
-      document.getElementById('hero-enquiry-form').reset();
-      setTimeout(() => {
+
+      // Submit to Netlify via AJAX
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+      .then(() => {
+        // Success
+        btn.textContent = '✓ Request Received!';
+        btn.style.background = 'linear-gradient(135deg,#2a8a4a,#3eb866)';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = '→ Request Site Visit';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      })
+      .catch(() => {
+        // Fallback: submit form normally if fetch fails
         btn.textContent = '→ Request Site Visit';
-        btn.style.background = '';
         btn.disabled = false;
-      }, 4000);
+        form.submit();
+      });
     }
   </script>
 
