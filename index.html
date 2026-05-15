@@ -9,7 +9,16 @@
   <meta name="description" content="Godrej Vanantara — finest new launch on Bannerghatta Road, South Bangalore. 36-acre forest township, 2/3/4.5 BHK from ₹1.57 Cr*. RERA Approved. Enquire today." />
   <meta name="keywords" content="godrej vanantara bannerghatta road, bannerghatta road new launch 2026, apartments on bannerghatta road bangalore, bannerghatta road luxury apartments, godrej bannerghatta road project, new launch bannerghatta road south bangalore, godrej vanantara price, godrej vanantara floor plan, godrej vanantara rera, 2 bhk bannerghatta road bangalore, 3 bhk bannerghatta road, luxury apartments south bangalore, godrej properties bannerghatta road, bannerghatta road real estate 2026, apartments near electronic city bannerghatta, godrej vanantara 2026, godrej vanantara possession date, godrej vanantara site visit, forest themed apartments bangalore, bannerghatta road upcoming projects" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="google-site-verification" content="qe0Y1iBNL2uxBw-RcftSZR40_i0T2-8ROS-H_umFjdg" />
   <link rel="canonical" href="https://www.godrejbannerghattaroad.co.in/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32"   href="/images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16"   href="/images/favicon.png" />
+  <link rel="apple-touch-icon"      sizes="180x180" href="/images/favicon.png" />
+  <link rel="shortcut icon"         type="image/png" href="/images/favicon.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -866,6 +875,14 @@
         <p>Get exclusive pre-launch pricing, floor plans &amp; RERA documents — sent instantly.</p>
         <form id="hero-enquiry-form" name="Hero Enquiry Form" method="POST" action="success.html" data-netlify="true" onsubmit="handleHeroForm(event)" novalidate>
           <input type="hidden" name="form-name" value="Hero Enquiry Form" />
+          <!-- UTM Tracking -->
+          <input type="hidden" name="utm_source"   value="" />
+          <input type="hidden" name="utm_medium"   value="" />
+          <input type="hidden" name="utm_campaign" value="" />
+          <input type="hidden" name="utm_content"  value="" />
+          <input type="hidden" name="utm_term"     value="" />
+          <input type="hidden" name="referrer_url" value="" />
+          <input type="hidden" name="landing_page" value="" />
           <div class="hf-group">
             <span class="hf-icon">👤</span>
             <input type="text" id="hf-name" name="name" placeholder="Your Full Name" required autocomplete="name" />
@@ -1497,6 +1514,14 @@
           <h3>Send an Enquiry</h3>
           <p>Register for exclusive launch benefits.</p>
           <form name="Godrej Contact Enquiry" method="POST" action="success.html" data-netlify="true">
+            <!-- UTM Tracking -->
+            <input type="hidden" name="utm_source"   value="" />
+            <input type="hidden" name="utm_medium"   value="" />
+            <input type="hidden" name="utm_campaign" value="" />
+            <input type="hidden" name="utm_content"  value="" />
+            <input type="hidden" name="utm_term"     value="" />
+            <input type="hidden" name="referrer_url" value="" />
+            <input type="hidden" name="landing_page" value="" />
             <div class="form-group">
               <label>Full Name</label>
               <input type="text" name="name" placeholder="Enter your name" required>
@@ -1555,6 +1580,14 @@
       <h3>Request Information</h3>
       <p>Please fill in your details below to get the full price list, floor plans, and brochure.</p>
       <form name="Godrej Modal Enquiry" method="POST" action="success.html" data-netlify="true">
+        <!-- UTM Tracking -->
+        <input type="hidden" name="utm_source"   value="" />
+        <input type="hidden" name="utm_medium"   value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="utm_content"  value="" />
+        <input type="hidden" name="utm_term"     value="" />
+        <input type="hidden" name="referrer_url" value="" />
+        <input type="hidden" name="landing_page" value="" />
         <div class="form-group">
           <label>Full Name</label>
           <input type="text" name="name" placeholder="Your Name" required>
@@ -1579,6 +1612,14 @@
       <h3>Get Exclusive Pre-Launch Price</h3>
       <p>Wait! Don't miss out on special pre-launch offers before you leave.</p>
       <form name="Godrej Exit Popup Enquiry" method="POST" action="success.html" data-netlify="true">
+        <!-- UTM Tracking -->
+        <input type="hidden" name="utm_source"   value="" />
+        <input type="hidden" name="utm_medium"   value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="utm_content"  value="" />
+        <input type="hidden" name="utm_term"     value="" />
+        <input type="hidden" name="referrer_url" value="" />
+        <input type="hidden" name="landing_page" value="" />
         <div class="form-group">
           <label>Full Name</label>
           <input type="text" name="name" placeholder="Your Name" required>
@@ -1602,6 +1643,14 @@
       <h3>Limited Units Available — Enquire Today</h3>
       <p>Register now to secure the best unit configurations and prices.</p>
       <form name="Godrej Scroll Popup Enquiry" method="POST" action="success.html" data-netlify="true">
+        <!-- UTM Tracking -->
+        <input type="hidden" name="utm_source"   value="" />
+        <input type="hidden" name="utm_medium"   value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="utm_content"  value="" />
+        <input type="hidden" name="utm_term"     value="" />
+        <input type="hidden" name="referrer_url" value="" />
+        <input type="hidden" name="landing_page" value="" />
         <div class="form-group">
           <label>Full Name</label>
           <input type="text" name="name" placeholder="Your Name" required>
@@ -1850,6 +1899,45 @@
         form.submit();
       });
     }
+
+    /* ---- UTM & Source Tracking ---- */
+    (function captureUTMs() {
+      const p = new URLSearchParams(window.location.search);
+
+      // Read from URL — fall back to sessionStorage (survives modal/scroll triggers)
+      function get(key, fallback) {
+        return p.get(key) || sessionStorage.getItem(key) || fallback || '';
+      }
+
+      const utms = {
+        utm_source:   get('utm_source',   document.referrer ? new URL(document.referrer).hostname : 'direct'),
+        utm_medium:   get('utm_medium',   ''),
+        utm_campaign: get('utm_campaign', ''),
+        utm_content:  get('utm_content',  ''),
+        utm_term:     get('utm_term',     ''),
+        referrer_url: sessionStorage.getItem('referrer_url') || document.referrer || 'direct',
+        landing_page: sessionStorage.getItem('landing_page') || window.location.href
+      };
+
+      // Persist to sessionStorage (first-touch attribution)
+      Object.entries(utms).forEach(([k, v]) => {
+        if (!sessionStorage.getItem(k)) sessionStorage.setItem(k, v);
+      });
+
+      // Inject into every Netlify form on the page
+      function fillForms() {
+        document.querySelectorAll('form[data-netlify="true"]').forEach(form => {
+          Object.entries(utms).forEach(([k, v]) => {
+            const el = form.querySelector('input[name="' + k + '"]');
+            if (el) el.value = sessionStorage.getItem(k) || v;
+          });
+        });
+      }
+
+      // Fill on load + re-fill whenever a modal opens (fields reset on re-render)
+      fillForms();
+      document.addEventListener('click', fillForms);
+    })();
   </script>
 
 
