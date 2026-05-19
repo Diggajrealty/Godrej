@@ -330,7 +330,10 @@
         <div class="hero-form-box">
           <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff;">Register Your Interest</h3>
           <p style="color: var(--clr-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Get early access to floor plans, pricing & exclusive pre-launch offers.</p>
-          <form name="hero_contact" method="POST" data-netlify="true" action="/thank-you.html">
+          <form name="hero_contact" method="POST" data-netlify="true" action="/thank-you.html" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="hero_contact" />
+  <div style="display: none;"><label>Don't fill this out if you're human: <input name="bot-field" /></label></div>
+
             <input type="hidden" name="form-name" value="hero_contact" />
             <div class="form-group">
               <input type="text" name="name" placeholder="Full Name*" required />
