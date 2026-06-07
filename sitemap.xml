@@ -55,19 +55,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-<<<<<<< HEAD
   <url>
     <loc>https://godrejbannerghattaroad.co.in/blog-godrej-vanantara-ultimate-guide.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-=======
-
-  <url>
-    <loc>https://yoursite.com/blogs/the-hidden-power-of-your-third-place.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
   <url>
@@ -89,6 +81,5 @@
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
->>>>>>> 6ed57f321d14f237c7bb9c62810167c3bcd19547
   </url>
 </urlset>
