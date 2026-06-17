@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block thank-you / form confirmation page
+Disallow: /success.html
+
+# Sitemap
+Sitemap: https://godrejbannerghattaroad.co.in/sitemap.xml
