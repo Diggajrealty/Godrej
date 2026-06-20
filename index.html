@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="NAEEy37kU9moTmYPvzXKd7l3WBSSk2AK5RUeOCgzPCk" />
 
   <title>Godrej Bannerghatta Road | Premium Luxury Apartments 2026</title>
 
@@ -126,25 +127,32 @@
     .stat-num { font-family: var(--font-heading); font-size: 2.5rem; color: var(--clr-primary); line-height: 1; margin-bottom: 0.5rem; }
     .stat-label { font-size: 0.8rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
-    /* Featured Project */
+    /* Featured Projects */
     .featured { padding: 8rem 5%; background: var(--clr-bg); position: relative; }
     .sec-header { text-align: center; margin-bottom: 4rem; }
     .sec-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1rem; }
     .sec-subtitle { color: var(--clr-primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; }
-    
-    .project-card { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; background: var(--clr-bg-surface); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; transition: var(--transition); }
-    .project-card:hover { transform: translateY(-10px); border-color: rgba(212,175,55,0.2); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
-    .pc-img { width: 100%; height: 100%; min-height: 400px; position: relative; display: flex; }
-    .pc-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; z-index: 0; }
-    .pc-badge { position: absolute; top: 1.5rem; left: 1.5rem; background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); color: var(--clr-primary); padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; border: 1px solid rgba(212,175,55,0.3); z-index: 1; }
-    .pc-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
-    .pc-title { font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 0.5rem; color: #fff; }
-    .pc-location { color: var(--clr-text-muted); font-size: 0.95rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem; }
-    .pc-features { list-style: none; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
-    .pc-features li { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; color: var(--clr-text); }
-    .pc-features li::before { content: ''; display: block; width: 6px; height: 6px; background: var(--clr-primary); border-radius: 50%; }
-    .pc-price { font-family: var(--font-heading); font-size: 1.8rem; color: var(--clr-primary); margin-bottom: 2rem; }
-    .pc-price span { font-family: var(--font-body); font-size: 0.85rem; color: var(--clr-text-muted); letter-spacing: 1px; }
+
+    /* Two-card featured grid */
+    .featured-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; max-width: 1300px; margin: 0 auto; }
+    .project-card { display: grid; grid-template-columns: 1fr; grid-template-rows: 280px auto; background: var(--clr-bg-surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; overflow: hidden; transition: var(--transition); }
+    .project-card:hover { transform: translateY(-10px); border-color: rgba(212,175,55,0.35); box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
+    .pc-img { width: 100%; height: 100%; position: relative; display: flex; overflow: hidden; }
+    .pc-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; z-index: 0; transition: transform 0.6s ease; }
+    .project-card:hover .pc-img img { transform: scale(1.05); }
+    .pc-badge { position: absolute; top: 1.2rem; left: 1.2rem; background: rgba(0,0,0,0.72); backdrop-filter: blur(10px); color: var(--clr-primary); padding: 0.4rem 0.9rem; border-radius: 4px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; border: 1px solid rgba(212,175,55,0.35); z-index: 1; text-transform: uppercase; }
+    .pc-type-badge { position: absolute; bottom: 1.2rem; right: 1.2rem; background: var(--clr-primary); color: #fff; padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; z-index: 1; text-transform: uppercase; }
+    .pc-content { padding: 2.2rem 2rem; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+    .pc-title { font-family: var(--font-heading); font-size: 1.7rem; margin-bottom: 0.3rem; color: #fff; }
+    .pc-location { color: var(--clr-text-muted); font-size: 0.88rem; margin-bottom: 1.4rem; display: flex; align-items: center; gap: 0.4rem; }
+    .pc-location::before { content: '📍'; font-size: 0.8rem; }
+    .pc-features { list-style: none; margin-bottom: 1.8rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .pc-features li { display: flex; align-items: center; gap: 0.85rem; font-size: 0.9rem; color: var(--clr-text); }
+    .pc-features li::before { content: ''; display: block; width: 6px; height: 6px; background: var(--clr-primary); border-radius: 50%; flex-shrink: 0; }
+    .pc-price { font-family: var(--font-heading); font-size: 1.6rem; color: var(--clr-primary); margin-bottom: 0.3rem; }
+    .pc-price span { font-family: var(--font-body); font-size: 0.82rem; color: var(--clr-text-muted); letter-spacing: 1px; }
+    .pc-price-note { font-size: 0.78rem; color: var(--clr-text-muted); margin-bottom: 1.5rem; }
+    @media (max-width: 900px) { .featured-cards { grid-template-columns: 1fr; } }
 
     /* Why Invest Grid */
     .invest { padding: 6rem 5%; background: linear-gradient(180deg, var(--clr-bg) 0%, #0a0e14 100%); }
@@ -307,6 +315,7 @@
         <li><a href="/" class="active">Overview</a></li>
         <li><a href="#featured">Featured Projects</a></li>
         <li><a href="#invest">Investment</a></li>
+        <li><a href="/godrej-plots-coimbatore/" style="color: #C9A84C;">Coimbatore Plots</a></li>
         <li><a href="/blog.html">Blog</a></li>
       </ul>
       <a href="/godrej-vanantara/" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">VIEW GODREJ VANANTARA</a>
@@ -369,29 +378,61 @@
 
   <section id="featured" class="featured">
     <div class="sec-header">
-      <div class="sec-subtitle">TOP RECOMMENDATION 2026</div>
-      <h2 class="sec-title">Featured Project</h2>
+      <div class="sec-subtitle">TOP RECOMMENDATIONS 2026</div>
+      <h2 class="sec-title">Featured Projects</h2>
+      <p style="color: var(--clr-text-muted); max-width: 580px; margin: 0 auto; font-size: 1rem; line-height: 1.8;">Two landmark developments by Godrej Properties — in Bangalore and Coimbatore. Two cities. One legacy of excellence.</p>
     </div>
-    
-    <div class="project-card">
-      <div class="pc-img">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Godrej Vanantara Luxury Apartments Exterior" width="600" height="400" />
-        <div class="pc-badge">RERA APPROVED NEW LAUNCH</div>
+
+    <div class="featured-cards">
+
+      <!-- Card 1: Godrej Vanantara -->
+      <div class="project-card">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Godrej Vanantara Luxury Apartments Exterior" width="600" height="400" />
+          <div class="pc-badge">RERA APPROVED NEW LAUNCH</div>
+          <div class="pc-type-badge">Apartments</div>
+        </div>
+        <div class="pc-content">
+          <div>
+            <h3 class="pc-title">Godrej Vanantara</h3>
+            <div class="pc-location">Bannerghatta Main Road, South Bangalore</div>
+            <ul class="pc-features">
+              <li>36-Acre Forest-Themed Luxury Township</li>
+              <li>2, 3 &amp; 4.5 BHK Configurations</li>
+              <li>65,000 sq.ft. Mega Clubhouse · 50+ Amenities</li>
+              <li>80%+ Open Space | 4-Acre Private Forest</li>
+            </ul>
+            <div class="pc-price"><strong>₹1.57 Cr*</strong> <span>Onwards</span></div>
+            <div class="pc-price-note">Base: ₹12,560/sq.ft. | All-inclusive: ~₹13,600/sq.ft.</div>
+          </div>
+          <a href="/godrej-vanantara/" class="btn btn-primary" style="align-self: flex-start;">EXPLORE VANANTARA →</a>
+        </div>
       </div>
-      <div class="pc-content">
-        <h3 class="pc-title">Godrej Vanantara</h3>
-        <div class="pc-location">Bannerghatta Main Road, South Bangalore</div>
-        <ul class="pc-features">
-          <li>36-Acre Forest-Themed Luxury Township</li>
-          <li>2, 3 & 4.5 BHK Configurations</li>
-          <li>65,000 sq.ft. Mega Clubhouse with 50+ Amenities</li>
-          <li>RERA: PRM/KA/RERA/1251/310/PR/130526/008653</li>
-          <li>80%+ Open Space | 4-Acre Private Forest</li>
-        </ul>
-        <div class="pc-price"><strong>₹1.57 Cr*</strong> <span>Onwards</span></div>
-        <div style="color: var(--clr-text-muted); font-size: 0.8rem; margin-top: -1.5rem; margin-bottom: 2rem;">Base: ₹12,560/sq.ft. | All-inclusive: ~₹13,600/sq.ft.</div>
-        <a href="/godrej-vanantara/" class="btn btn-primary" style="align-self: flex-start;">EXPLORE PROJECT DETAILS</a>
+
+      <!-- Card 2: Godrej Plots Coimbatore -->
+      <div class="project-card" style="border-color: rgba(201,168,76,0.2);">
+        <div class="pc-img">
+          <img src="images/godrej-plots-coimbatore-featured.png" alt="Godrej Plots Coimbatore — Premium Gated Plotted Community near Golf Club" width="600" height="400" />
+          <div class="pc-badge" style="color: #C9A84C; border-color: rgba(201,168,76,0.4);">DTCP · LPA · RERA APPROVED</div>
+          <div class="pc-type-badge" style="background: #C9A84C; color: #1B3A2D;">Plots</div>
+        </div>
+        <div class="pc-content">
+          <div>
+            <h3 class="pc-title">Godrej Plots Coimbatore</h3>
+            <div class="pc-location">Chettipalayam, South Coimbatore, Tamil Nadu</div>
+            <ul class="pc-features">
+              <li>44-Acre Premium Gated Plot Community</li>
+              <li>700+ Plots · 800 to 3,000 sq.ft. Sizes</li>
+              <li>Opposite 150-Acre Coimbatore Golf Club</li>
+              <li>Grand Clubhouse · Pool · Gym · Jogging Trail</li>
+            </ul>
+            <div class="pc-price" style="color: #C9A84C;"><strong>₹50 Lakhs*</strong> <span>Onwards</span></div>
+            <div class="pc-price-note">Godrej's first landmark plotted launch in Coimbatore</div>
+          </div>
+          <a href="/godrej-plots-coimbatore/" class="btn btn-primary" style="align-self: flex-start; background: linear-gradient(135deg, #C9A84C, #e8c97a); color: #1B3A2D; box-shadow: 0 8px 24px rgba(201,168,76,0.25);">EXPLORE COIMBATORE →</a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -489,7 +530,7 @@
         <li><strong>ORR Accessibility:</strong> Easy links to the Outer Ring Road for Bellandur and Marathahalli access.</li>
       </ul>
     </div>
-    <img src="https://images.unsplash.com/photo-1596525141088-7517926b4d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Bangalore NICE Road Connectivity" class="two-col-img" width="600" height="400" loading="lazy" />
+    <img src="images/bangalore-connectivity-nice-road.png" alt="Bangalore NICE Road Connectivity" class="two-col-img" width="600" height="400" loading="lazy" />
   </section>
 
   <!-- NEW SECTION 2: Social Infrastructure -->
@@ -519,7 +560,7 @@
 
   <!-- NEW SECTION 3: Masterplan -->
   <section class="two-col reverse" id="masterplan" style="padding-top: 2rem;">
-    <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Godrej Vanantara Forest Theme" class="two-col-img" width="600" height="400" loading="lazy" />
+    <img src="images/vanantara-forest-masterplan.png" alt="Godrej Vanantara Forest Theme" class="two-col-img" width="600" height="400" loading="lazy" />
     <div class="tc-content">
       <div class="sec-subtitle">THE FOREST THEME</div>
       <h2 class="sec-title" style="text-align: left; font-size: clamp(1.8rem, 3vw, 2.8rem);">Experience The 36-Acre Forest Masterplan</h2>
@@ -577,7 +618,7 @@
       <p style="color: var(--clr-text-muted); margin-bottom: 1.5rem;">Data indicates a consistent <strong>10–12% Year-on-Year appreciation</strong> in this micro-market since 2020. The impending launch of the Pink Line Metro is a proven catalyst; historical data from Bangalore's Purple and Green lines show that property values within a 2 km radius of a new metro station surge by 18-25% within 24 months of the line becoming operational.</p>
       <p style="color: var(--clr-text-muted);">Investing in Godrej Vanantara at pre-launch prices secures your asset at the lowest possible entry point, maximizing your ROI.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Real Estate Investment Bannerghatta Road" class="two-col-img" width="600" height="400" loading="lazy" />
+    <img src="images/real-estate-investment-bannerghatta.png" alt="Real Estate Investment Bannerghatta Road" class="two-col-img" width="600" height="400" loading="lazy" />
   </section>
 
   <!-- NEW SECTION 6: Comparison -->
@@ -707,6 +748,78 @@
     </div>
   </section>
 
+  <!-- SECTION: Also Explore — Godrej Plots Coimbatore -->
+  <section id="explore-more" style="padding: 7rem 5%; background: linear-gradient(180deg, #0a0e14 0%, #0d1117 100%); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div class="sec-header" style="margin-bottom: 3.5rem;">
+        <div class="sec-subtitle">ALSO EXPLORE</div>
+        <h2 class="sec-title">More Premium Projects by Godrej Properties</h2>
+        <p style="color: var(--clr-text-muted); max-width: 620px; margin: 0 auto; font-size: 1rem; line-height: 1.8;">Beyond Bangalore, Godrej Properties is redefining luxury living in India's fastest-growing Tier-2 cities. Explore their landmark entry into Coimbatore.</p>
+      </div>
+
+      <!-- Coimbatore Card -->
+      <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; background: rgba(255,255,255,0.02); border: 1px solid rgba(201,168,76,0.25); border-radius: 20px; overflow: hidden; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(201,168,76,0.55)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.5)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'; this.style.transform='none'; this.style.boxShadow='none'">
+        <!-- Image Side -->
+        <div style="position: relative; min-height: 420px; background: linear-gradient(160deg, rgba(8,22,14,0.75) 0%, rgba(27,58,45,0.65) 100%), url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover; display: flex; flex-direction: column; justify-content: flex-end; padding: 2.5rem;">
+          <!-- Badge -->
+          <div style="position: absolute; top: 1.5rem; left: 1.5rem; background: rgba(0,0,0,0.65); backdrop-filter: blur(10px); color: #C9A84C; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; border: 1px solid rgba(201,168,76,0.3); text-transform: uppercase;">DTCP · LPA · RERA Approved</div>
+          <!-- Stat Pills -->
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.2rem;">
+            <span style="background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: #C9A84C; font-size: 0.75rem; font-weight: 600; padding: 0.35rem 0.85rem; border-radius: 50px;">700+ Plots</span>
+            <span style="background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: #C9A84C; font-size: 0.75rem; font-weight: 600; padding: 0.35rem 0.85rem; border-radius: 50px;">44 Acres</span>
+            <span style="background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: #C9A84C; font-size: 0.75rem; font-weight: 600; padding: 0.35rem 0.85rem; border-radius: 50px;">Golf Club Facing</span>
+          </div>
+          <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.15; text-shadow: 0 2px 12px rgba(0,0,0,0.5);">Godrej Plots<br/><span style="color: #C9A84C; font-style: italic;">Coimbatore</span></div>
+        </div>
+
+        <!-- Content Side -->
+        <div style="padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; background: rgba(27,58,45,0.12);">
+          <div style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A84C; font-weight: 600; margin-bottom: 0.6rem;">South Coimbatore, Tamil Nadu</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-bottom: 0.75rem; line-height: 1.25;">Premium Gated Plotted Community Near Golf Club</h3>
+          <p style="color: var(--clr-text-muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 2rem;">Godrej's landmark debut in Coimbatore — 44 acres of curated living directly opposite the 150-acre Coimbatore Golf Club. Build your dream home on your own schedule with DTCP, LPA & RERA approved plots.</p>
+
+          <ul style="list-style: none; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.85rem;">
+            <li style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.92rem; color: var(--clr-text);">
+              <span style="display: block; width: 6px; height: 6px; background: #C9A84C; border-radius: 50%; flex-shrink: 0;"></span>
+              Plot sizes from 800 sq.ft. to 3,000 sq.ft.
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.92rem; color: var(--clr-text);">
+              <span style="display: block; width: 6px; height: 6px; background: #C9A84C; border-radius: 50%; flex-shrink: 0;"></span>
+              Grand Clubhouse, Pool, Gym & 20+ Amenities
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.92rem; color: var(--clr-text);">
+              <span style="display: block; width: 6px; height: 6px; background: #C9A84C; border-radius: 50%; flex-shrink: 0;"></span>
+              Upcoming Coimbatore Metro — Price Appreciation Catalyst
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.92rem; color: var(--clr-text);">
+              <span style="display: block; width: 6px; height: 6px; background: #C9A84C; border-radius: 50%; flex-shrink: 0;"></span>
+              Chettipalayam — Connected to RS Puram, Race Course & Peelamedu
+            </li>
+          </ul>
+
+          <div style="margin-bottom: 2rem;">
+            <div style="font-family: var(--font-heading); font-size: 1.9rem; color: #C9A84C; line-height: 1;">₹50 Lakhs*</div>
+            <div style="font-size: 0.8rem; color: var(--clr-text-muted); margin-top: 0.25rem;">Starting price · Subject to availability</div>
+          </div>
+
+          <a href="/godrej-plots-coimbatore/" class="btn btn-primary" style="align-self: flex-start; background: linear-gradient(135deg, #C9A84C, #e8c97a); color: #1B3A2D; border: none; box-shadow: 0 8px 24px rgba(201,168,76,0.3);" id="explore-coimbatore-btn">EXPLORE COIMBATORE PROJECT →</a>
+        </div>
+      </div>
+
+      <!-- Responsive style for the card -->
+      <style>
+        @media (max-width: 860px) {
+          #explore-more [style*="grid-template-columns: 1.1fr"] {
+            grid-template-columns: 1fr !important;
+          }
+          #explore-more [style*="min-height: 420px"] {
+            min-height: 260px !important;
+          }
+        }
+      </style>
+    </div>
+  </section>
+
   <section class="faq">
     <div class="sec-header">
       <div class="sec-subtitle">INSIGHTS</div>
@@ -758,6 +871,7 @@
     <div class="footer-links">
       <a href="/">Home</a>
       <a href="/godrej-vanantara/">Godrej Vanantara</a>
+      <a href="/godrej-plots-coimbatore/">Godrej Plots Coimbatore</a>
       <a href="/blog.html">Real Estate Blog</a>
       <a href="/godrej-vanantara/#contact">Contact</a>
     </div>
